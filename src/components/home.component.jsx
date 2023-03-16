@@ -1,11 +1,13 @@
 import { useHome } from "./home.hook";
 
 const Home = () => {
-  const { dataCurrency } = useHome();
+  // const { dataCurrency } = useHome();
+  const { CAD, EUR, IDR, JPY, CHF, GBP } = useHome();
+
   return (
     <div>
       {/* <p>{JSON.stringify(dataCurrency)}</p> */}
-      {/* <h3>{dataCurrency.date}</h3> */}
+
       <h2 className="title">Exchange Rates Currency</h2>
       <div className="tableCurrency">
         <table>
@@ -20,55 +22,49 @@ const Home = () => {
           <tbody>
             <tr>
               <td>CAD</td>
-              <td></td>
-              <td>{dataCurrency.rates && dataCurrency.rates.CAD}</td>
+              <td>{Number(CAD) + (5 / 100) * Number(CAD)}</td>
+              <td>{CAD}</td>
+              <td>{Number(CAD) - (5 / 100) * Number(CAD)}</td>
             </tr>
             <tr>
               <td>EUR</td>
-              <td></td>
-              <td>{dataCurrency.rates && dataCurrency.rates.EUR}</td>
+              <td>{Number(EUR) + (5 / 100) * Number(EUR)}</td>
+              <td>{EUR}</td>
+              <td>{Number(EUR) - (5 / 100) * Number(EUR)}</td>
             </tr>
             <tr>
               <td>IDR</td>
-              <td></td>
-              <td>{dataCurrency.rates && dataCurrency.rates.IDR}</td>
+              <td>{Number(IDR) + (5 / 100) * Number(IDR)}</td>
+              <td>{IDR}</td>
+              <td>{Number(IDR) - (5 / 100) * Number(IDR)}</td>
             </tr>
             <tr>
               <td>JPY</td>
-              <td></td>
-              <td>{dataCurrency.rates && dataCurrency.rates.JPY}</td>
+              <td>{Number(JPY) + (5 / 100) * Number(JPY)}</td>
+              <td>{JPY}</td>
+              <td>{Number(JPY) - (5 / 100) * Number(JPY)}</td>
             </tr>
             <tr>
               <td>CHF</td>
-              <td></td>
-              <td>{dataCurrency.rates && dataCurrency.rates.CHF}</td>
+              <td>{Number(CHF) + (5 / 100) * Number(CHF)}</td>
+              <td>{CHF}</td>
+              <td>{Number(CHF) - (5 / 100) * Number(CHF)}</td>
             </tr>
             <tr>
               <td>GBP</td>
-              <td></td>
-              <td>{dataCurrency.rates && dataCurrency.rates.GBP}</td>
+              <td>{Number(GBP) + (5 / 100) * Number(GBP)}</td>
+              <td>{GBP}</td>
+              <td>{Number(GBP) - (5 / 100) * Number(GBP)}</td>
             </tr>
           </tbody>
         </table>
       </div>
+      <p className="tagline">
+        Rates are based from 1 USD <br /> This application uses API from{" "}
+        <a href="https://currencyfreaks.com/">currencyfreaks.com</a>
+      </p>
+      <p className="author">Designed By Rachmat Ghaly</p>
     </div>
-
-    // <CurrencyFreaks>
-    //   <response>
-    //     <date>2020-08-11 11:44:00+00</date>
-    //     <base>USD</base>
-    //     <rates>
-    //       <FJD>2.13402</FJD>
-    //       <MXN>22.3225</MXN>
-    //       <CDF>1947.72</CDF>
-    //       <GTQ>7.7</GTQ>
-    //       <CLP>805.98</CLP>
-    //       <HNL>24.6815</HNL>
-    //       <UGX>3667.81</UGX>
-    //       <_1INCH>1.6690</_1INCH>
-    //     </rates>
-    //   </response>
-    // </CurrencyFreaks>
   );
 };
 

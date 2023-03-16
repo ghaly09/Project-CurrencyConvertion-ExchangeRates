@@ -10,17 +10,27 @@ export const useHome = () => {
       .then((response) => {
         return response.json();
       })
-      .then((result) => {
-        setDataCurrency(result);
+      .then((dataCurrency) => {
+        setDataCurrency(dataCurrency.rates);
       });
   }, []);
 
-  // useEffect(() => {
-
-  // })
+  // Change The number of digits to appear after the decimal point to be 6 digits
+  const CAD = Number.parseFloat(dataCurrency && dataCurrency.CAD).toFixed(6);
+  const EUR = Number.parseFloat(dataCurrency && dataCurrency.EUR).toFixed(6);
+  const IDR = Number.parseFloat(dataCurrency && dataCurrency.IDR).toFixed(6);
+  const JPY = Number.parseFloat(dataCurrency && dataCurrency.JPY).toFixed(6);
+  const CHF = Number.parseFloat(dataCurrency && dataCurrency.CHF).toFixed(6);
+  const GBP = Number.parseFloat(dataCurrency && dataCurrency.GBP).toFixed(6);
 
   return {
     dataCurrency,
+    CAD,
+    EUR,
+    IDR,
+    JPY,
+    CHF,
+    GBP,
     // setDataCurrency,
   };
 };

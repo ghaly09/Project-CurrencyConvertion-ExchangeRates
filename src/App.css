@@ -4,6 +4,25 @@
   color: rgb(1, 153, 153);
 }
 
+.author {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 12px;
+  font-style: italic;
+  color: rgb(1, 153, 153);
+}
+
+.tagline {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 12px;
+  color: rgb(1, 153, 153);
+}
+
+a {
+  text-decoration: none;
+}
+
 .tableCurrency {
   display: flex;
   flex-direction: row;
@@ -23,4 +42,8 @@ tbody {
   text-align: center;
   font-weight: 500;
   color: rgb(134, 134, 134);
+}
+
+td:hover {
+  color: orange;
 }
