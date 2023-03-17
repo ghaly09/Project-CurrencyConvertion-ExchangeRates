@@ -22,39 +22,87 @@ const Home = () => {
           <tbody>
             <tr>
               <td>CAD</td>
-              <td>{Number(CAD) + (5 / 100) * Number(CAD)}</td>
+              <td>
+                {Number.parseFloat(
+                  Number(CAD) + (5 / 100) * Number(CAD)
+                ).toFixed(4)}
+              </td>
               <td>{CAD}</td>
-              <td>{Number(CAD) - (5 / 100) * Number(CAD)}</td>
+              <td>
+                {Number.parseFloat(
+                  Number(CAD) - (5 / 100) * Number(CAD)
+                ).toFixed(4)}
+              </td>
             </tr>
             <tr>
               <td>EUR</td>
-              <td>{Number(EUR) + (5 / 100) * Number(EUR)}</td>
+              <td>
+                {Number.parseFloat(
+                  Number(EUR) + (5 / 100) * Number(EUR)
+                ).toFixed(4)}
+              </td>
               <td>{EUR}</td>
-              <td>{Number(EUR) - (5 / 100) * Number(EUR)}</td>
+              <td>
+                {Number.parseFloat(
+                  Number(EUR) - (5 / 100) * Number(EUR)
+                ).toFixed(4)}
+              </td>
             </tr>
             <tr>
               <td>IDR</td>
-              <td>{Number(IDR) + (5 / 100) * Number(IDR)}</td>
+              <td>
+                {Number.parseFloat(
+                  Number(IDR) + (5 / 100) * Number(IDR)
+                ).toFixed(4)}
+              </td>
               <td>{IDR}</td>
-              <td>{Number(IDR) - (5 / 100) * Number(IDR)}</td>
+              <td>
+                {Number.parseFloat(
+                  Number(IDR) - (5 / 100) * Number(IDR)
+                ).toFixed(4)}
+              </td>
             </tr>
             <tr>
               <td>JPY</td>
-              <td>{Number(JPY) + (5 / 100) * Number(JPY)}</td>
+              <td>
+                {Number.parseFloat(
+                  Number(JPY) + (5 / 100) * Number(JPY)
+                ).toFixed(4)}
+              </td>
               <td>{JPY}</td>
-              <td>{Number(JPY) - (5 / 100) * Number(JPY)}</td>
+              <td>
+                {Number.parseFloat(
+                  Number(JPY) - (5 / 100) * Number(JPY)
+                ).toFixed(4)}
+              </td>
             </tr>
             <tr>
               <td>CHF</td>
-              <td>{Number(CHF) + (5 / 100) * Number(CHF)}</td>
+              <td>
+                {Number.parseFloat(
+                  Number(CHF) + (5 / 100) * Number(CHF)
+                ).toFixed(4)}
+              </td>
               <td>{CHF}</td>
-              <td>{Number(CHF) - (5 / 100) * Number(CHF)}</td>
+              <td>
+                {Number.parseFloat(
+                  Number(CHF) - (5 / 100) * Number(CHF)
+                ).toFixed(4)}
+              </td>
             </tr>
             <tr>
               <td>GBP</td>
-              <td>{Number(GBP) + (5 / 100) * Number(GBP)}</td>
+              <td>
+                {Number.parseFloat(
+                  Number(GBP) + (5 / 100) * Number(GBP)
+                ).toFixed(4)}
+              </td>
               <td>{GBP}</td>
-              <td>{Number(GBP) - (5 / 100) * Number(GBP)}</td>
+              <td>
+                {Number.parseFloat(
+                  Number(GBP) - (5 / 100) * Number(GBP)
+                ).toFixed(4)}
+              </td>
             </tr>
           </tbody>
         </table>
