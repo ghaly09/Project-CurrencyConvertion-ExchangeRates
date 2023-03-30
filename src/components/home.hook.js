@@ -12,7 +12,8 @@ export const useHome = () => {
       })
       .then((dataCurrency) => {
         setDataCurrency(dataCurrency.rates);
-      });
+      })
+      .catch((error) => console.log(error));
   }, []);
 
   // Change The number of digits to appear after the decimal point to be 6 digits
